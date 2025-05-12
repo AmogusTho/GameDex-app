@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="Hello World!"
         android:textColor="#E0E0E0"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.464"
@@ -25,7 +25,7 @@
         android:id="@+id/btn1"
         android:layout_width="122dp"
         android:layout_height="75dp"
-        android:text="Button"
+        android:text="@string/button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -40,7 +40,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="280dp"
         android:ems="10"
-        android:hint="Name"
+        android:hint="@string/name"
         android:inputType="textPersonName"
         android:textColor="#E0E0E0"
         android:textColorHint="#888888"
@@ -49,6 +49,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintVertical_bias="0.059"
+        android:autofillHints="" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
