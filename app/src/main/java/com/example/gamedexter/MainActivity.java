@@ -14,5 +14,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btn = findViewById(R.id.btn1);
         btn.setOnClickListener(v -> Toast.makeText(MainActivity.this, "Button clicked!", Toast.LENGTH_SHORT).show());
+        im gay;
     }
 }
