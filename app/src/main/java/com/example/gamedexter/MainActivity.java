@@ -2,7 +2,6 @@ package com.example.gamedexter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.SoundEffectConstants;
 import android.view.View;
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         lbtn.setOnClickListener(v -> {
             BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(MainActivity.this);
-            @SuppressLint("InflateParams") View bottomsheetView = getLayoutInflater().inflate(R.layout.menu_bottom_sheet, null);
+            View bottomsheetView = getLayoutInflater().inflate(R.layout.menu_bottom_sheet, null);
 
             bottomSheetDialog.setContentView(bottomsheetView);
             bottomSheetDialog.show();
