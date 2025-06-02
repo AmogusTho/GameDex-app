@@ -1,7 +1,9 @@
 package com.example.gamedexter;
 
 import android.app.Dialog;
+import android.os.Build;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -73,7 +75,9 @@ public class MarkerBottomSheetDialogFragment extends BottomSheetDialogFragment {
             description = args.getString("description");
             titleView.setText(title);
             typeView.setText(type);
-            descView.setText(description);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                descView.setText(Html.fromHtml(description, Html.FROM_HTML_MODE_LEGACY));
+            }
         }
 
         foundButton.setOnClickListener(v -> {
@@ -93,7 +97,7 @@ public class MarkerBottomSheetDialogFragment extends BottomSheetDialogFragment {
 
             // Делаем его растягиваемым
             behavior.setPeekHeight(BottomSheetBehavior.PEEK_HEIGHT_AUTO);
-            behavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+            parent.post(() -> behavior.setState(BottomSheetBehavior.STATE_HALF_EXPANDED));
 
             // Устанавливаем максимальную высоту (до почти всего экрана)
             parent.getLayoutParams().height = ViewGroup.LayoutParams.MATCH_PARENT;
